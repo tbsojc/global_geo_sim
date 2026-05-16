@@ -1,0 +1,22 @@
+{
+  "tag": "CHN",
+  "name": "China",
+
+  "government": "authoritarian",
+
+  "base_stability": 70,
+  "inflation": 1.5,
+  "unemployment": 5.5,
+
+  "base_tech_level": 82,
+  "military_power": 88,
+
+  "province_ids": [
+    201,
+    202
+  ],
+
+  "relations": {
+    "USA": -55
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "name": "High Inflation Crisis",
+
+    "trigger": {
+      "field": "inflation",
+      "greater_than": 10
+    },
+
+    "effect": {
+      "field": "stability",
+      "change": -2
+    }
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Mass Protests",
+
+    "trigger": {
+      "field": "stability",
+      "greater_than": 0
+    },
+
+    "effect": {
+      "field": "inflation",
+      "change": 0.2
+    }
+  }
+]

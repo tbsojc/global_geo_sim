@@ -1,0 +1,22 @@
+{
+  "tag": "USA",
+  "name": "United States",
+
+  "government": "democracy",
+
+  "base_stability": 64,
+  "inflation": 3.2,
+  "unemployment": 4.2,
+
+  "base_tech_level": 94,
+  "military_power": 96,
+
+  "province_ids": [
+    101,
+    102
+  ],
+
+  "relations": {
+    "CHN": -55
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2026,
+  "month": 1,
+
+  "global_growth": 1.8,
+  "global_tension": 20.0,
+
+  "countries": [
+    "usa",
+    "china"
+  ],
+
+  "province_mode": "all"
+}
