@@ -1,20 +1,32 @@
 {
   "tag": "USA",
   "name": "United States",
-
   "government": "democracy",
 
-  "base_stability": 64,
-  "inflation": 3.2,
-  "unemployment": 4.2,
+  "state": {
+    "stability": 64,
+    "legitimacy": 72,
+    "administrative_capacity": 82,
+    "corruption": 18,
+    "war_support": 48,
+    "social_cohesion": 55,
+    "unrest": 12
+  },
 
-  "base_tech_level": 94,
-  "military_power": 96,
+  "economy": {
+    "inflation": 3.2,
+    "unemployment": 4.2
+  },
 
-  "province_ids": [
-    101,
-    102
-  ],
+  "technology": {
+    "tech_level": 94
+  },
+
+  "military": {
+    "military_power": 96
+  },
+
+  "province_ids": [101, 102],
 
   "relations": {
     "CHN": -55

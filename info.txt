@@ -1,0 +1,14 @@
+The key fingerprint is:
+SHA256:oP8zL5z9lSyvIxXWbEq6PoKpRYHTVJYd7cxF8d8m9Hs bsteinheil@web.de
+The key's randomart image is:
++--[ED25519 256]--+
+|      ..oo.o .o. |
+|     + .. . . .. |
+|    o +    + +. .|
+|     o o    B.+.o|
+|    . . S  + +. =|
+|     o    . o. +.|
+|      o+ o o. +.E|
+|     .o.B = .+  .|
+|    ..  .Bo+oo.  |
++----[SHA256]-----+

@@ -1,20 +1,32 @@
 {
   "tag": "CHN",
   "name": "China",
-
   "government": "authoritarian",
 
-  "base_stability": 70,
-  "inflation": 1.5,
-  "unemployment": 5.5,
+  "state": {
+    "stability": 70,
+    "legitimacy": 76,
+    "administrative_capacity": 88,
+    "corruption": 35,
+    "war_support": 62,
+    "social_cohesion": 68,
+    "unrest": 8
+  },
 
-  "base_tech_level": 82,
-  "military_power": 88,
+  "economy": {
+    "inflation": 1.5,
+    "unemployment": 5.5
+  },
 
-  "province_ids": [
-    201,
-    202
-  ],
+  "technology": {
+    "tech_level": 82
+  },
+
+  "military": {
+    "military_power": 88
+  },
+
+  "province_ids": [201, 202],
 
   "relations": {
     "USA": -55
