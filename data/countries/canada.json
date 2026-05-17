@@ -1,0 +1,58 @@
+{
+  "tag": "CAN",
+  "name": "Canada",
+  "government": "democracy",
+  "state": {
+    "stability": 78,
+    "legitimacy": 80,
+    "administrative_capacity": 84,
+    "corruption": 12,
+    "war_support": 30,
+    "social_cohesion": 74,
+    "unrest": 4
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "resource_exports",
+    "stable_institutions",
+    "north_american_trade"
+  ],
+  "sliders": {
+    "democracy_authoritarian": -4,
+    "liberty_control": -3,
+    "globalism_nationalism": -2,
+    "traditional_progressive": 2,
+    "centralization_decentralization": 1,
+    "production_trade": 0,
+    "free_market_planned": -3,
+    "hawk_dove": 3,
+    "interventionism_isolationism": 1
+  },
+  "economy": {
+    "inflation": 2.6,
+    "unemployment": 5.4
+  },
+  "technology": {
+    "tech_level": 84
+  },
+  "military": {
+    "military_power": 52
+  },
+  "province_ids": [
+    319
+  ],
+  "relations": {
+    "USA": 75,
+    "CHN": -5,
+    "RUS": -10
+  }
+}

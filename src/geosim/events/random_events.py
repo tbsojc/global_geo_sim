@@ -17,7 +17,11 @@ def trigger_random_events(world) -> None:
 
             growth = random.uniform(0.5, 2.0)
 
-            country.gdp_b *= (1 + growth / 100)
+            factor = 1 + growth / 100
+
+            country.tax_income *= factor
+            country.production_income *= factor
+            country.trade_income *= factor
 
             world.log_event(
                 f"Economic boom in {country.name} "

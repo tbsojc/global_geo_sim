@@ -1,3 +1,5 @@
+from src.geosim.systems.economy import total_income
+
 def weighted_average(items, value_fn, weight_fn) -> float:
     total_weight = sum(weight_fn(item) for item in items)
 
@@ -20,10 +22,10 @@ def aggregate_country_from_provinces(world, country) -> None:
 
     population = sum(p.population_m for p in provinces)
 
-    gdp = sum(
-        getattr(p, "gdp_b", 0.0)
-        for p in provinces
-    )
+    tax_income = sum(p.tax_income for p in provinces)
+    production_income = sum(p.production_income for p in provinces)
+    trade_income = sum(getattr(p, "trade_income", 0.0) for p in provinces)
+    country.trade_income = trade_income
 
     avg_infrastructure = weighted_average(
         provinces,
@@ -34,7 +36,10 @@ def aggregate_country_from_provinces(world, country) -> None:
     avg_industry = weighted_average(
         provinces,
         lambda p: p.industry,
-        lambda p: max(getattr(p, "gdp_b", 0.1), 0.1),
+        lambda p: max(
+            p.tax_income + p.production_income + p.trade_income,
+            0.1,
+        ),
     )
 
     avg_development = weighted_average(
@@ -55,10 +60,19 @@ def aggregate_country_from_provinces(world, country) -> None:
         if p.resource == "energy"
     )
 
-    economic_size = max(gdp / 1000, 1)
+    economic_size = max(
+    (
+        tax_income
+        + production_income
+        + trade_income
+    ) / 1000,
+    1,
+)
 
     country.population_m = population
-    country.gdp_b = gdp
+    country.tax_income = tax_income
+    country.production_income = production_income
+    country.trade_income = trade_income
 
     country.infrastructure = avg_infrastructure
     country.industry = avg_industry

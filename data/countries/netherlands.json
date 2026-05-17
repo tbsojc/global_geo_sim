@@ -1,0 +1,58 @@
+{
+  "tag": "NLD",
+  "name": "Netherlands",
+  "government": "democracy",
+  "state": {
+    "stability": 80,
+    "legitimacy": 84,
+    "administrative_capacity": 92,
+    "corruption": 10,
+    "war_support": 24,
+    "social_cohesion": 76,
+    "unrest": 3
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "global_shipping",
+    "port_infrastructure",
+    "trade_economy"
+  ],
+  "sliders": {
+    "democracy_authoritarian": -4,
+    "liberty_control": -4,
+    "globalism_nationalism": -3,
+    "traditional_progressive": 2,
+    "centralization_decentralization": 0,
+    "production_trade": 3,
+    "free_market_planned": -4,
+    "hawk_dove": 3,
+    "interventionism_isolationism": 2
+  },
+  "economy": {
+    "inflation": 2.1,
+    "unemployment": 3.8
+  },
+  "technology": {
+    "tech_level": 88
+  },
+  "military": {
+    "military_power": 46
+  },
+  "province_ids": [
+    336
+  ],
+  "relations": {
+    "DEU": 48,
+    "USA": 30,
+    "FRA": 26
+  }
+}

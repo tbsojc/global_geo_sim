@@ -1,14 +1,33 @@
 {
   "year": 2026,
   "month": 1,
-
   "global_growth": 1.8,
   "global_tension": 20.0,
-
   "countries": [
     "usa",
-    "china"
+    "china",
+    "japan",
+    "taiwan",
+    "germany",
+    "indonesia",
+    "saudi_arabia",
+    "russia",
+    "brazil",
+    "chile",
+    "dr_congo",
+    "canada",
+    "bangladesh",
+    "switzerland",
+    "france",
+    "south_korea",
+    "vietnam",
+    "uae",
+    "italy",
+    "netherlands",
+    "australia",
+    "south_africa",
+    "norway",
+    "egypt"
   ],
-
   "province_mode": "all"
 }

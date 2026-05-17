@@ -1,0 +1,58 @@
+{
+  "tag": "VNM",
+  "name": "Vietnam",
+  "government": "socialist",
+  "state": {
+    "stability": 68,
+    "legitimacy": 70,
+    "administrative_capacity": 58,
+    "corruption": 44,
+    "war_support": 36,
+    "social_cohesion": 64,
+    "unrest": 8
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "manufacturing_growth",
+    "export_industry",
+    "foreign_investment"
+  ],
+  "sliders": {
+    "democracy_authoritarian": 2,
+    "liberty_control": 2,
+    "globalism_nationalism": -1,
+    "traditional_progressive": -1,
+    "centralization_decentralization": -2,
+    "production_trade": -1,
+    "free_market_planned": 2,
+    "hawk_dove": 1,
+    "interventionism_isolationism": 0
+  },
+  "economy": {
+    "inflation": 3.4,
+    "unemployment": 2.8
+  },
+  "technology": {
+    "tech_level": 52
+  },
+  "military": {
+    "military_power": 56
+  },
+  "province_ids": [
+    333
+  ],
+  "relations": {
+    "CHN": -22,
+    "USA": 24,
+    "RUS": 18
+  }
+}

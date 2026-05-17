@@ -35,7 +35,11 @@ def update_provinces(world) -> None:
 
         monthly_growth = growth / 12 / 100
 
-        province.gdp_b *= 1 + monthly_growth
+        factor = 1 + monthly_growth
+
+        province.tax_income *= factor
+        province.production_income *= factor
+        province.trade_income *= factor
         province.resource_output *= 1 + monthly_growth
 
         if owner.state.stability < 50:

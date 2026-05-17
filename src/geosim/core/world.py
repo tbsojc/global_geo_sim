@@ -12,6 +12,7 @@ class World:
 
     countries: Dict[str, Country]
     provinces: Dict[int, Province]
+    trade_good_prices: dict[str, float] = field(default_factory=dict)
 
     global_growth: float = 1.8
     global_tension: float = 20.0

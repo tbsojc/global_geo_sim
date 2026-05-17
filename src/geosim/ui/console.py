@@ -1,3 +1,5 @@
+from src.geosim.systems.economy import total_income
+
 def print_world_summary(world) -> None:
     print(f"\n===== {world.date_label()} =====")
     print(f"Global Tension: {world.global_tension:.2f}")
@@ -7,7 +9,10 @@ def print_world_summary(world) -> None:
     print(
         f"{'Tag':<5} "
         f"{'State':<22} "
-        f"{'GDP':>8} "
+        f"{'Tax':>8} "
+        f"{'Prod':>8} "
+        f"{'Trade':>8} "
+        f"{'Total':>8} "
         f"{'Stab':>7} "
         f"{'Infl':>7} "
         f"{'Unemp':>7} "
@@ -31,7 +36,10 @@ def print_world_summary(world) -> None:
         print(
             f"{country.tag:<5} "
             f"{country.name:<22} "
-            f"{country.gdp_b:>8.0f} "
+            f"{country.tax_income:>8.0f} "
+            f"{country.production_income:>8.0f} "
+            f"{country.trade_income:>8.0f} "
+            f"{total_income(country):>8.0f} "
             f"{country.state.stability:>7.1f} "
             f"{country.economy.inflation:>7.1f} "
             f"{country.economy.unemployment:>7.1f} "
@@ -51,7 +59,10 @@ def print_province_summary(world) -> None:
         f"{'Province':<18} "
         f"{'Owner':<6} "
         f"{'Pop':>7} "
-        f"{'GDP':>8} "
+        f"{'Tax':>7} "
+        f"{'Prod':>7} "
+        f"{'Trade':>7} "
+        f"{'Total':>7} "
         f"{'Infra':>7} "
         f"{'Ind':>7} "
         f"{'Dev':>7} "
@@ -70,7 +81,10 @@ def print_province_summary(world) -> None:
             f"{province.name:<18} "
             f"{province.owner:<6} "
             f"{province.population_m:>7.1f} "
-            f"{province.gdp_b:>8.0f} "
+            f"{province.tax_income:>7.0f} "
+            f"{province.production_income:>7.0f} "
+            f"{province.trade_income:>7.0f} "
+            f"{total_income(province):>7.0f} "
             f"{province.infrastructure:>7.1f} "
             f"{province.industry:>7.1f} "
             f"{province.development:>7.1f} "

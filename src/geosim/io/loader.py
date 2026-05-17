@@ -74,7 +74,9 @@ def load_provinces() -> dict[int, Province]:
                 continent=row["continent"],
 
                 population_m=float(row["population_m"]),
-                gdp_b=float(row["gdp_b"]),
+                tax_income=float(row["tax_income"]),
+                production_income=float(row["production_income"]),
+                trade_income=float(row["trade_income"]),
                 urbanization=float(row["urbanization"]),
 
                 culture=row["culture"],
@@ -108,6 +110,9 @@ def load_provinces() -> dict[int, Province]:
 
     return provinces
 
+def load_trade_good_prices() -> dict[str, float]:
+    path = DATA_PATH / "trade_goods" / "base_prices.json"
+    return load_json(path)
 
 def load_events():
     events = []
@@ -132,6 +137,8 @@ def load_world(scenario_name: str) -> World:
 
     all_provinces = load_provinces()
 
+    trade_good_prices = load_trade_good_prices()
+
     scenario_province_ids = scenario.get("provinces", [])
 
     if scenario_province_ids:
@@ -149,4 +156,6 @@ def load_world(scenario_name: str) -> World:
         provinces=provinces,
         global_growth=scenario.get("global_growth", 1.8),
         global_tension=scenario.get("global_tension", 20.0),
+        trade_good_prices=trade_good_prices,
     )
+

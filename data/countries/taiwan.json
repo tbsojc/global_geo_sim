@@ -1,0 +1,59 @@
+{
+  "tag": "TWN",
+  "name": "Taiwan",
+  "government": "democracy",
+  "state": {
+    "stability": 68,
+    "legitimacy": 82,
+    "administrative_capacity": 80,
+    "corruption": 20,
+    "war_support": 58,
+    "social_cohesion": 66,
+    "unrest": 7
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "semiconductor_foundry",
+    "island_defense_focus",
+    "contested_sovereignty"
+  ],
+  "sliders": {
+    "democracy_authoritarian": -4,
+    "liberty_control": -3,
+    "globalism_nationalism": -1,
+    "traditional_progressive": 1,
+    "centralization_decentralization": 0,
+    "production_trade": -2,
+    "free_market_planned": -3,
+    "hawk_dove": -2,
+    "interventionism_isolationism": 0
+  },
+  "economy": {
+    "inflation": 2.2,
+    "unemployment": 3.4
+  },
+  "technology": {
+    "tech_level": 92
+  },
+  "military": {
+    "military_power": 62
+  },
+  "province_ids": [
+    303
+  ],
+  "relations": {
+    "USA": 55,
+    "CHN": -80,
+    "JPN": 30,
+    "DEU": 25
+  }
+}

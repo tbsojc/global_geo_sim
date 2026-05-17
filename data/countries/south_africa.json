@@ -1,0 +1,58 @@
+{
+  "tag": "ZAF",
+  "name": "South Africa",
+  "government": "democracy",
+  "state": {
+    "stability": 44,
+    "legitimacy": 56,
+    "administrative_capacity": 48,
+    "corruption": 58,
+    "war_support": 26,
+    "social_cohesion": 38,
+    "unrest": 24
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "mineral_exports",
+    "financial_center_africa",
+    "power_shortages"
+  ],
+  "sliders": {
+    "democracy_authoritarian": -1,
+    "liberty_control": 1,
+    "globalism_nationalism": 0,
+    "traditional_progressive": -1,
+    "centralization_decentralization": 1,
+    "production_trade": 0,
+    "free_market_planned": -1,
+    "hawk_dove": 1,
+    "interventionism_isolationism": 1
+  },
+  "economy": {
+    "inflation": 5.2,
+    "unemployment": 31.0
+  },
+  "technology": {
+    "tech_level": 48
+  },
+  "military": {
+    "military_power": 44
+  },
+  "province_ids": [
+    338
+  ],
+  "relations": {
+    "USA": 2,
+    "CHN": 16,
+    "RUS": 10
+  }
+}

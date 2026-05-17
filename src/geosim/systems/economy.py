@@ -20,3 +20,19 @@ def update_economy(world) -> None:
             )
 
         country.clamp()
+
+def total_income(entity) -> float:
+    return (
+        getattr(entity, "tax_income", 0.0)
+        + getattr(entity, "production_income", 0.0)
+        + getattr(entity, "trade_income", 0.0)
+    )
+
+
+def income_per_capita(entity) -> float:
+    population = getattr(entity, "population_m", 0.0)
+
+    if population <= 0:
+        return 0.0
+
+    return total_income(entity) / population

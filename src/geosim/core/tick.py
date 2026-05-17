@@ -6,6 +6,7 @@ from src.geosim.systems.economy import update_economy
 from src.geosim.systems.politics import update_politics
 from src.geosim.systems.provinces import update_provinces
 from src.geosim.systems.modifiers import update_country_modifiers
+from src.geosim.systems.trade import update_trade_income
 
 
 def run_tick(world, events) -> None:
@@ -15,6 +16,7 @@ def run_tick(world, events) -> None:
 
     update_provinces(world)
     aggregate_all_countries(world)
+    update_trade_income(world, world.trade_good_prices)
     update_economy(world)
     update_politics(world)
     update_diplomacy(world)

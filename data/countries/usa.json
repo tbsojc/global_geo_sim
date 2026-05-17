@@ -55,7 +55,7 @@
     "military_power": 96
   },
 
-  "province_ids": [101, 102],
+  "province_ids": [304, 305, 321, 322, 328],
 
   "relations": {
     "CHN": -55

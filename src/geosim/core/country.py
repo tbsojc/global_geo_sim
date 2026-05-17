@@ -101,7 +101,9 @@ class Country:
     sliders: CountrySliders = field(default_factory=CountrySliders)
 
     population_m: float = 0.0
-    gdp_b: float = 0.0
+    tax_income: float = 0.0
+    production_income: float = 0.0
+    trade_income: float = 0.0
     infrastructure: float = 0.0
     industry: float = 0.0
     development: float = 0.0
@@ -145,12 +147,14 @@ class Country:
         self.industry = max(0, min(100, self.industry))
         self.development = max(0, min(100, self.development))
         self.energy_dependence = max(0, min(1, self.energy_dependence))
-        self.gdp_b = max(0, self.gdp_b)
+        self.tax_income = max(0.0, self.tax_income)
+        self.production_income = max(0.0, self.production_income)
+        self.trade_income = max(0.0, self.trade_income)
         self.population_m = max(0, self.population_m)
 
     def power_score(self) -> float:
         return (
-            self.gdp_b * 0.4
+            (self.tax_income + self.production_income + self.trade_income) * 0.4
             + self.population_m * 5
             + self.technology.tech_level * 20
             + self.military.military_power * 25

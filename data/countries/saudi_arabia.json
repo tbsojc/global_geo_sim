@@ -1,0 +1,59 @@
+{
+  "tag": "SAU",
+  "name": "Saudi Arabia",
+  "government": "monarchy",
+  "state": {
+    "stability": 78,
+    "legitimacy": 84,
+    "administrative_capacity": 74,
+    "corruption": 28,
+    "war_support": 58,
+    "social_cohesion": 72,
+    "unrest": 5
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "oil_superpower",
+    "sovereign_wealth_fund",
+    "energy_exports"
+  ],
+  "sliders": {
+    "democracy_authoritarian": 4,
+    "liberty_control": 3,
+    "globalism_nationalism": 1,
+    "traditional_progressive": -3,
+    "centralization_decentralization": -3,
+    "production_trade": -1,
+    "free_market_planned": 1,
+    "hawk_dove": -2,
+    "interventionism_isolationism": -1
+  },
+  "economy": {
+    "inflation": 2.0,
+    "unemployment": 4.8
+  },
+  "technology": {
+    "tech_level": 66
+  },
+  "military": {
+    "military_power": 74
+  },
+  "province_ids": [
+    410
+  ],
+  "relations": {
+    "USA": 25,
+    "RUS": 10,
+    "CHN": 20,
+    "IDN": 18
+  }
+}

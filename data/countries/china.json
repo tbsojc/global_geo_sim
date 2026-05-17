@@ -54,7 +54,7 @@
     "military_power": 88
   },
 
-  "province_ids": [201, 202],
+  "province_ids": [308, 309, 314, 315, 324, 325],
 
   "relations": {
     "USA": -55

@@ -1,0 +1,59 @@
+{
+  "tag": "BRA",
+  "name": "Brazil",
+  "government": "democracy",
+  "state": {
+    "stability": 58,
+    "legitimacy": 66,
+    "administrative_capacity": 56,
+    "corruption": 48,
+    "war_support": 32,
+    "social_cohesion": 52,
+    "unrest": 14
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "agricultural_exports",
+    "mineral_exports",
+    "regional_power"
+  ],
+  "sliders": {
+    "democracy_authoritarian": -1,
+    "liberty_control": 0,
+    "globalism_nationalism": -1,
+    "traditional_progressive": -1,
+    "centralization_decentralization": 2,
+    "production_trade": 1,
+    "free_market_planned": -1,
+    "hawk_dove": 1,
+    "interventionism_isolationism": 1
+  },
+  "economy": {
+    "inflation": 4.3,
+    "unemployment": 7.8
+  },
+  "technology": {
+    "tech_level": 56
+  },
+  "military": {
+    "military_power": 58
+  },
+  "province_ids": [
+    316,
+    327
+  ],
+  "relations": {
+    "USA": 10,
+    "CHN": 28,
+    "RUS": 5
+  }
+}

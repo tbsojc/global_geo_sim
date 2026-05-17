@@ -1,0 +1,60 @@
+{
+  "tag": "IDN",
+  "name": "Indonesia",
+  "government": "democracy",
+  "state": {
+    "stability": 66,
+    "legitimacy": 70,
+    "administrative_capacity": 62,
+    "corruption": 38,
+    "war_support": 40,
+    "social_cohesion": 58,
+    "unrest": 10
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "archipelago_trade_routes",
+    "resource_exports",
+    "tourism_sector"
+  ],
+  "sliders": {
+    "democracy_authoritarian": -1,
+    "liberty_control": 0,
+    "globalism_nationalism": -1,
+    "traditional_progressive": -1,
+    "centralization_decentralization": 2,
+    "production_trade": 1,
+    "free_market_planned": -1,
+    "hawk_dove": 0,
+    "interventionism_isolationism": 1
+  },
+  "economy": {
+    "inflation": 3.1,
+    "unemployment": 5.3
+  },
+  "technology": {
+    "tech_level": 58
+  },
+  "military": {
+    "military_power": 54
+  },
+  "province_ids": [
+    310,
+    320
+  ],
+  "relations": {
+    "CHN": 15,
+    "USA": 10,
+    "RUS": 5,
+    "SAU": 18
+  }
+}

@@ -18,7 +18,9 @@ class Province:
 
     population_m: float = 0.0
     urbanization: float = 0.0
-    gdp_b: float = 0.0
+    tax_income: float = 0.0
+    production_income: float = 0.0
+    trade_income: float = 0.0
 
     culture: str = "unknown"
     religion: str = "secular"

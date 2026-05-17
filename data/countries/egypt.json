@@ -1,0 +1,58 @@
+{
+  "tag": "EGY",
+  "name": "Egypt",
+  "government": "authoritarian",
+  "state": {
+    "stability": 58,
+    "legitimacy": 64,
+    "administrative_capacity": 52,
+    "corruption": 54,
+    "war_support": 44,
+    "social_cohesion": 50,
+    "unrest": 16
+  },
+  "base_modifiers": {
+    "tax_efficiency": 1.0,
+    "production_efficiency": 1.0,
+    "trade_efficiency": 1.0,
+    "research_efficiency": 1.0,
+    "administration_efficiency": 1.0,
+    "diplomacy_efficiency": 1.0,
+    "military_industry_efficiency": 1.0,
+    "mobilization_speed": 1.0
+  },
+  "active_modifiers": [
+    "suez_trade_route",
+    "regional_power",
+    "population_pressure"
+  ],
+  "sliders": {
+    "democracy_authoritarian": 3,
+    "liberty_control": 3,
+    "globalism_nationalism": 0,
+    "traditional_progressive": -2,
+    "centralization_decentralization": -2,
+    "production_trade": 2,
+    "free_market_planned": 1,
+    "hawk_dove": -1,
+    "interventionism_isolationism": -1
+  },
+  "economy": {
+    "inflation": 13.4,
+    "unemployment": 7.2
+  },
+  "technology": {
+    "tech_level": 42
+  },
+  "military": {
+    "military_power": 68
+  },
+  "province_ids": [
+    340
+  ],
+  "relations": {
+    "USA": 18,
+    "SAU": 22,
+    "ISR": -38
+  }
+}
