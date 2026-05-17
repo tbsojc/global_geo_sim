@@ -1,39 +1,47 @@
 def print_world_summary(world) -> None:
     print(f"\n===== {world.date_label()} =====")
     print(f"Global Tension: {world.global_tension:.2f}")
-    print("-" * 82)
+
+    print("-" * 132)
 
     print(
-        f"{'State':<15} "
-        f"{'GDP':>10} "
+        f"{'Tag':<5} "
+        f"{'State':<22} "
+        f"{'GDP':>8} "
         f"{'Stab':>7} "
         f"{'Infl':>7} "
         f"{'Unemp':>7} "
+        f"{'Tech':>7} "
         f"{'Mil':>7} "
-        f"{'Power':>8} "
-        f"{'Prov':>5}"
+        f"{'Prod':>7} "
+        f"{'Trade':>7} "
+        f"{'Res':>7} "
+        f"{'Admin':>7}"
     )
 
-    print("-" * 82)
+    print("-" * 132)
 
     for country in sorted(
         world.countries.values(),
         key=lambda c: c.power_score(),
         reverse=True
     ):
-        provinces = world.provinces_of(country.tag)
+        mods = country.final_modifiers
 
         print(
-            f"{country.name:<15} "
-            f"{country.gdp_b:>10.0f} "
-            f"{country.stability:>7.1f} "
-            f"{country.inflation:>7.1f} "
-            f"{country.unemployment:>7.1f} "
-            f"{country.military_power:>7.1f} "
-            f"{country.power_score():>8.1f} "
-            f"{len(provinces):>5}"
+            f"{country.tag:<5} "
+            f"{country.name:<22} "
+            f"{country.gdp_b:>8.0f} "
+            f"{country.state.stability:>7.1f} "
+            f"{country.economy.inflation:>7.1f} "
+            f"{country.economy.unemployment:>7.1f} "
+            f"{country.technology.tech_level:>7.1f} "
+            f"{country.military.military_power:>7.1f} "
+            f"{mods.production_efficiency:>7.2f} "
+            f"{mods.trade_efficiency:>7.2f} "
+            f"{mods.research_efficiency:>7.2f} "
+            f"{mods.administration_efficiency:>7.2f}"
         )
-
 
 def print_province_summary(world) -> None:
     print("\nProvinces:")

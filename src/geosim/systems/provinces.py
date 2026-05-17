@@ -5,6 +5,8 @@ def update_provinces(world) -> None:
         if owner is None:
             continue
 
+        mods = owner.final_modifiers
+
         growth = world.global_growth
 
         growth += (province.infrastructure - 50) / 180
@@ -15,36 +17,40 @@ def update_provinces(world) -> None:
         growth -= province.autonomy / 300
 
         if province.is_coastal:
-            growth += 0.05
+            growth += 0.05 * mods.trade_efficiency
 
         if province.has_port:
-            growth += 0.08
+            growth += 0.08 * mods.trade_efficiency
 
         if "financial_center" in province.buildings:
-            growth += 0.12
+            growth += 0.12 * mods.trade_efficiency
 
         if "manufacturing_cluster" in province.buildings:
-            growth += 0.10
+            growth += 0.10 * mods.production_efficiency
 
         if "tech_hub" in province.buildings:
-            growth += 0.10
+            growth += 0.10 * mods.research_efficiency
+
+        growth *= mods.production_efficiency
 
         monthly_growth = growth / 12 / 100
 
         province.gdp_b *= 1 + monthly_growth
         province.resource_output *= 1 + monthly_growth
 
-        if owner.stability < 50:
+        if owner.state.stability < 50:
             province.unrest += 0.05
 
-        if owner.stability > 70:
+        if owner.state.stability > 70:
             province.unrest -= 0.03
+
+        province.unrest += mods.unrest_modifier
 
         if province.owner not in province.cores:
             province.unrest += 0.08
 
         if province.unrest > 40:
-            owner.stability -= 0.05
+            owner.state.stability -= 0.05
 
         province.clamp()
         owner.clamp()

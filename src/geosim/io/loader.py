@@ -49,7 +49,7 @@ def parse_modifiers(value: str) -> dict:
 def load_country(tag: str) -> Country:
     path = DATA_PATH / "countries" / f"{tag.lower()}.json"
     data = load_json(path)
-    return Country(**data)
+    return Country.from_dict(data)
 
 
 def load_provinces() -> dict[int, Province]:

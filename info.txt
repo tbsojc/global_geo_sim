@@ -12,3 +12,11 @@ The key's randomart image is:
 |     .o.B = .+  .|
 |    ..  .Bo+oo.  |
 +----[SHA256]-----+
+
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+Agent pid 678638
+Identity added: /home/benedicts/.ssh/id_ed25519 (bsteinheil@web.de)
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwbJmwXIL0RY768Fr0z17gARIs4sEeWQdYjc3CtDEOF bsteinheil@web.de

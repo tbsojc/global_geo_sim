@@ -32,8 +32,8 @@ def trigger_random_events(world) -> None:
 
             inflation = random.uniform(0.5, 2.5)
 
-            country.inflation += inflation
-            country.stability -= inflation * 0.4
+            country.economy.inflation += inflation
+            country.state.stability -= inflation * 0.4
 
             world.log_event(
                 f"Energy crisis in {country.name} "
@@ -48,8 +48,8 @@ def trigger_random_events(world) -> None:
 
             reform = random.uniform(0.5, 1.5)
 
-            country.stability += reform
-            country.tech_level += reform * 0.3
+            country.state.stability += reform
+            country.technology.tech_level += reform * 0.3
 
             world.log_event(
                 f"Political reforms in {country.name}"
@@ -60,14 +60,14 @@ def trigger_random_events(world) -> None:
         # =====================================================
 
         if (
-            country.inflation > 8
-            and country.stability < 50
+            country.economy.inflation > 8
+            and country.state.stability < 50
             and random_event_chance(5)
         ):
 
             damage = random.uniform(1.0, 4.0)
 
-            country.stability -= damage
+            country.state.stability -= damage
 
             world.log_event(
                 f"Mass protests in {country.name} "

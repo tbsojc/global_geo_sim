@@ -16,8 +16,14 @@ def aggregate_country_from_provinces(world, country) -> None:
     if not provinces:
         return
 
+    mods = country.final_modifiers
+
     population = sum(p.population_m for p in provinces)
-    gdp = sum(getattr(p, "gdp_b", 0.0) for p in provinces)
+
+    gdp = sum(
+        getattr(p, "gdp_b", 0.0)
+        for p in provinces
+    )
 
     avg_infrastructure = weighted_average(
         provinces,
@@ -55,13 +61,20 @@ def aggregate_country_from_provinces(world, country) -> None:
     country.gdp_b = gdp
 
     country.infrastructure = avg_infrastructure
+    country.industry = avg_industry
+    country.development = avg_development
 
-    country.tech_level = (
-        country.tech_level * 0.85
-        + avg_development * 0.15
+    country.technology.tech_level = (
+        country.technology.tech_level * 0.85
+        + avg_development * 0.15 * mods.research_efficiency
     )
 
-    country.stability -= max(0, avg_unrest - 10) * 0.03
+    unrest_pressure = max(0, avg_unrest - 10)
+    country.state.stability -= (
+        unrest_pressure
+        * 0.03
+        / mods.administration_efficiency
+    )
 
     country.energy_dependence = max(
         0,

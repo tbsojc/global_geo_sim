@@ -5,14 +5,20 @@ def change_relation(country, target_tag: str, amount: float) -> None:
 
 def update_diplomacy(world) -> None:
     for country in world.countries.values():
+        mods = country.final_modifiers
+
         for target_tag, relation in country.relations.items():
             if relation < -50:
-                world.global_tension += 0.02
+                world.global_tension += 0.02 / mods.diplomacy_efficiency
 
             if relation > 50:
-                world.global_tension -= 0.01
+                world.global_tension -= 0.01 * mods.diplomacy_efficiency
 
             if world.global_tension > 60 and relation < -40:
-                change_relation(country, target_tag, -0.03)
+                change_relation(
+                    country,
+                    target_tag,
+                    -0.03 / mods.diplomacy_efficiency
+                )
 
     world.global_tension = max(0, min(100, world.global_tension))
